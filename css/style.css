@@ -92,17 +92,13 @@ body {
 }
 
 .footer-nav__item {
-    font-size:clamp(1.625rem, 5vw - 1.9rem, 2.625rem);
+    font-size: minmax(12px, 42px);
     font-weight: 600;
     line-height: 120%;
     color: #000;
 }
 
 @media (max-width: 720px){
-    .footer-nav__item {
-        font-size:clamp(0.75rem, 5vw - 0.75rem, 1.625rem);
-    }
-
     .fashion-photo {
         grid-template-columns: minmax(330px, 578px);
     }
