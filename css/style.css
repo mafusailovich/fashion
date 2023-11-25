@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1E1E1E;
+}
+
+.wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: clamp(3.75rem, 20vw - 5.2rem, 7.5rem);
+}
+
+.fashion {
+    padding: clamp(3.75rem, 5vw + 2rem, 6.5rem) clamp(0.938rem, 20vw - 6.5rem, 7.125rem) clamp(3.75rem, 20vw - 5.2rem, 7.5rem);
+}
+
+.container {
+    max-width: 1212px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fashion__text {
+    font-size: clamp(1.563rem, 10vw - 2.55rem, 3.875rem);;
+    font-weight: 500;
+    line-height: 120%;
+    color: #fff;
+    margin-bottom: clamp(3.75rem, 20vw - 6rem, 6.5rem);
+}
+
+.fashion-photo {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); */
+    grid-template-columns: minmax(318px, 578px) minmax(334px,606px);
+    gap: clamp(0.963rem, 5vw - 2rem, 1.75rem);
+}
+
+.fashion-photo__big,
+.fashion-photo__small {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fashion-photo__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fashion-photo__small,
+.fashion-photo__text {
+    margin-bottom: clamp(1.563rem, 5vw - 0.9rem, 3.625rem);
+}
+
+.fashion-photo__text {
+    max-width: 507px;
+    width: 100%;
+    font-size: clamp(0.75rem, 2vw - 0.25rem, 1.125rem);
+    font-weight: 500;
+    line-height: 150%;
+    color: #A6A6A6;
+}
+
+.fashion-photo__btn {
+    width: clamp(5.625rem, 12vw - 0.9rem, 8.563rem);
+    height: clamp(2.25rem, 6vw - 1rem, 3.688rem);
+    background-color: #fff;
+    color: #000;
+    padding: clamp(0.688rem, 3vw - 1rem, 1.25rem) clamp(1.1rem, 2.5vw - 1rem, 2rem);
+    font-size: clamp(0.75rem, 1vw + 0.1rem, 1rem);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: minmax(29px,124px);
+    background-color: #fff;
+    padding-top:  clamp(1.563rem, 15vw - 4.7rem, 4.188rem);
+    padding-right:  clamp(0.938rem, 12vw - 2.65rem, 7.938rem);
+    padding-bottom:  clamp(1.563rem, 15vw - 4.7rem, 4.25rem);
+    padding-left:  clamp(0.938rem, 10vw - 1.7rem, 6.938rem);
+}
+
+.footer-nav__item {
+    font-size:clamp(1.625rem, 5vw - 1.9rem, 2.625rem);
+    font-weight: 600;
+    line-height: 120%;
+    color: #000;
+}
+
+@media (max-width: 720px){
+    .footer-nav__item {
+        font-size:clamp(0.75rem, 5vw - 0.75rem, 1.625rem);
+    }
+
+    .fashion-photo {
+        grid-template-columns: minmax(330px, 578px);
+    }
+}
