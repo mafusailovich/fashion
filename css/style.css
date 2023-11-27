@@ -10,6 +10,8 @@ body {
 }
 
 .wrapper {
+    background-color: #000;
+    max-height: 1658px;
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
@@ -41,11 +43,21 @@ body {
     gap: clamp(0.963rem, 5vw - 2rem, 1.75rem);
 }
 
-.fashion-photo__big,
+
+.fashion-photo__big {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/images/girl1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 .fashion-photo__small {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: 1px solid #fff;
 }
 
 .fashion-photo__item {
@@ -83,7 +95,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: minmax(29px,124px);
     background-color: #fff;
     padding-top:  clamp(1.563rem, 15vw - 4.7rem, 4.188rem);
     padding-right:  clamp(0.938rem, 12vw - 2.65rem, 7.938rem);
@@ -92,7 +103,7 @@ body {
 }
 
 .footer-nav__item {
-    font-size: minmax(12px, 42px);
+    font-size: clamp(1.625rem, 9vw - 5rem, 2.625rem);
     font-weight: 600;
     line-height: 120%;
     color: #000;
@@ -100,6 +111,14 @@ body {
 
 @media (max-width: 720px){
     .fashion-photo {
-        grid-template-columns: minmax(330px, 578px);
+        grid-template-columns: minmax(330px, 568px);
+    }
+
+    .fashion-photo__big {
+        height: clamp(26rem, 100vw + 3rem, 45.5rem);
+    }
+
+    .footer-nav__item {
+        font-size: clamp(0.75rem, 4vw - 0.3rem, 1.625rem);
     }
 }
