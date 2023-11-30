@@ -6,7 +6,6 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #1E1E1E;
 }
 
 .wrapper {
@@ -43,27 +42,34 @@ body {
     gap: clamp(0.963rem, 5vw - 2rem, 1.75rem);
 }
 
-
-.fashion-photo__big {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/images/girl1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    border: 1px solid #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.fashion-photo__small {
+.fashion-photo__small,
+.fashion-photo__big{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border: 1px solid #fff;
 }
 
+
+.fashin-photo__big-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
 .fashion-photo__item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.fashion-photo__item:first-child {
+    position: relative;
 }
 
 .fashion-photo__small,
@@ -111,11 +117,7 @@ body {
 
 @media (max-width: 720px){
     .fashion-photo {
-        grid-template-columns: minmax(330px, 568px);
-    }
-
-    .fashion-photo__big {
-        height: clamp(26rem, 100vw + 3rem, 45.5rem);
+        grid-template-columns: minmax(330px, 1fr);
     }
 
     .footer-nav__item {
